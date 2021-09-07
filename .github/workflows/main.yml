@@ -19,8 +19,8 @@ jobs:
 
       - name: add chinese fonts
         run: |
-          apt-get install ttf-mscorefonts-installer
-          apt-get install fontconfig
+          sudo apt-get install ttf-mscorefonts-installer
+          sudo apt-get install fontconfig
           fc-list :lang=zh
           ls -lh /usr/share/fonts/
           cp -rf ./fonts/* /usr/share/fonts/
