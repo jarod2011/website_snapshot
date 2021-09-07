@@ -1,0 +1,15 @@
+{
+  "name": "website_snapshot",
+  "version": "1.0.0",
+  "description": "a script to build a website snapshot.",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "keywords": [],
+  "author": "Jarod2011",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^10.2.0"
+  }
+}
