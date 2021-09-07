@@ -20,9 +20,10 @@ const sleep = (second) => {
         width: 1280,
         height: 960,
         isMobile: false,
-
     })
     await page.setJavaScriptEnabled(true)
+    await page.setDefaultNavigationTimeout(0)
+    await page.setDefaultTimeout(0)
     console.debug('start to visit website: '+website)
     await page.goto(website);
     const filename = (new Date()).toISOString()+".png"
