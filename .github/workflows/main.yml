@@ -34,7 +34,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run script
-        run: npm run
+        run: node index.js
         
       - name: Print result
         run: ls -lh ./snapshot
