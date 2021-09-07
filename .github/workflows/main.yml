@@ -17,8 +17,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: show system fonts
-        run: ls -lh /usr/share/fonts/
+      - name: add chinese fonts
+        run: |
+          fc-list :lang=zh
+          ls -lh /usr/share/fonts/
+          cp -rf ./fonts/* /usr/share/fonts/
+          mkfontscale
+          mkfontdir
+          fc-cache
+          fc-list :lang=zh
 
       - name: Cache node modules
         uses: actions/cache@v2
