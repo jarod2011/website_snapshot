@@ -16,6 +16,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+
+      - name: show system fonts
+        run: ls -lh /usr/share/fonts/
+
       - name: Cache node modules
         uses: actions/cache@v2
         env:
